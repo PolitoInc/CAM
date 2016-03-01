@@ -241,7 +241,7 @@ class BurpExtender(IBurpExtender, ITab, IMessageEditorController, AbstractTableM
         self.projPath = JTextField("")
         self.projPath.setBounds(140, 90, 320, 30)
 
-        chooseProjPathButton = JButton("Browse...", actionPerformed=self.chooseProjPath)
+        chooseProjPathButton = JButton("Browse", actionPerformed=self.chooseProjPath)
         chooseProjPathButton.setBounds(470, 90, 100, 30)
 
         importProjButton = JButton("Import", actionPerformed=self.importProj)
