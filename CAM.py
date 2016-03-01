@@ -5,60 +5,57 @@ import random
 import re
 import shutil
 import subprocess
-import sys
 import xml.etree.ElementTree as ET
 import zipfile
+from ConfigParser import SafeConfigParser
+from threading import Lock
 
-from burp import ITab
 from burp import IBurpExtender
 from burp import IContextMenuFactory
 from burp import IMessageEditorController
-from ConfigParser import SafeConfigParser
-from java.io import File
-from javax.imageio import ImageIO
-from threading import Lock
+from burp import ITab
 from java.awt import Color
 from java.awt import RenderingHints
 from java.awt import Toolkit
+from java.awt.datatransfer import DataFlavor
+from java.awt.datatransfer import Transferable
+from java.awt.event import ActionListener
+from java.awt.event import MouseAdapter
+from java.awt.image import BufferedImage
+from java.io import File
 from java.util import ArrayList
 from java.util import LinkedList
-from javax.swing import JList
-from javax.swing import JTable
-from javax.swing import JLabel
-from javax.swing import JMenu
-from javax.swing import JPanel
-from javax.swing import JButton
-from javax.swing import ImageIcon
-from javax.swing import JTextArea
-from javax.swing import JSplitPane
-from javax.swing import JTextField
-from javax.swing import JMenuItem
-from javax.swing import JCheckBox
-from javax.swing import JScrollPane
-from javax.swing import JComboBox
-from javax.swing import JOptionPane
-from javax.swing import JPopupMenu
-from javax.swing import JFileChooser
-from javax.swing import JTabbedPane
+from javax.imageio import ImageIO
 from javax.swing import BorderFactory
-from javax.swing import DefaultListModel
-from javax.swing import ScrollPaneConstants
 from javax.swing import DefaultComboBoxModel
+from javax.swing import DefaultListModel
+from javax.swing import ImageIcon
+from javax.swing import JButton
+from javax.swing import JCheckBox
+from javax.swing import JComboBox
+from javax.swing import JFileChooser
+from javax.swing import JLabel
+from javax.swing import JList
+from javax.swing import JMenu
+from javax.swing import JMenuItem
+from javax.swing import JOptionPane
+from javax.swing import JPanel
+from javax.swing import JPopupMenu
+from javax.swing import JScrollPane
+from javax.swing import JSplitPane
+from javax.swing import JTabbedPane
+from javax.swing import JTable
+from javax.swing import JTextArea
+from javax.swing import JTextField
+from javax.swing import ScrollPaneConstants
 from javax.swing.event import DocumentListener
 from javax.swing.event import ListSelectionListener
+from javax.swing.filechooser import FileNameExtensionFilter
 from javax.swing.table import AbstractTableModel
-from javax.swing.border import LineBorder
-from java.awt.event import MouseAdapter
-from java.awt.event import ActionListener
-from java.awt.datatransfer import Clipboard
-from java.awt.datatransfer import DataFlavor
-from java.awt.image import BufferedImage
-from java.awt.datatransfer import Transferable
 from javax.xml.parsers import DocumentBuilderFactory
 from javax.xml.transform import TransformerFactory
 from javax.xml.transform.dom import DOMSource
 from javax.xml.transform.stream import StreamResult
-from javax.swing.filechooser import FileNameExtensionFilter
 
 
 class BurpExtender(IBurpExtender, ITab, IMessageEditorController, AbstractTableModel, IContextMenuFactory):
