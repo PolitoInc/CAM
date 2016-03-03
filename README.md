@@ -16,6 +16,7 @@ Centralized Assessment Manager for Burp Suite
 # How to use
 After installing Burp Suite will have the CAM tab in its UI.
 ![alt tag](https://github.com/PolitoInc/CAM/blob/master/CAM_User_Guide_1.PNG)
+
 ^Project Settings tab^: 
 * Open the Project Settings tab (CAM -> Project Settings) and create a new project. (I reccomend on an encrypted partition) 
 * The "Details" area can be used to save any project details such as URLs, credentials, contact details, or any other comments.
@@ -24,6 +25,7 @@ After installing Burp Suite will have the CAM tab in its UI.
 * "Open directory", this button just opens up where your project is stored at. (I might remove this later.)
 
 ![alt tag](https://github.com/PolitoInc/CAM/blob/master/CAM_User_Guide_4.PNG)
+
 ^Vulnerability Tab^:
 * Here we can create vulnerabilities/add vulnerability descriptions/add remidiation guidelines.
 * Vulnerabilities can be color coded and the threat levels changed to your preference.
@@ -36,6 +38,7 @@ After installing Burp Suite will have the CAM tab in its UI.
 * We can right-click on a url in the "Target" tab send to CAM from there. 
 
 ![alt tag](https://github.com/PolitoInc/CAM/blob/master/CAM_User_Guide_5.PNG)
+
 ^ This is what happens after you "send to Cam", you must select a vunerability to put it under. 
 
 * There are request/response tabs as well and pull the same information from the "Target" tab into CAM. 
